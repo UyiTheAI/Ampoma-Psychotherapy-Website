@@ -1,0 +1,21 @@
+{
+  "name": "ampoma-psychotherapy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "predev": "node ./scripts/ensure-dependencies.mjs",
+    "dev": "node ./scripts/dev.mjs",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "build": "npm run build --workspace=frontend",
+    "start": "npm run start --workspace=backend"
+  }
+}
